@@ -11,7 +11,7 @@ export const myReducer = ((state = initialState, action) => {
             }
 
         case "REMOVE_CLICKED_PRODUCT":
-            const updatedCart = state.userCart.filter(item => item.id !== action.payload);
+            const updatedCart = state.userCart.filter(item => item.id !== action.payload);  ///state me userCart me filter lagao item pe ke jis kisi item ki id not equal to hai id jo action.payload se aari un sab ko return state me update karo
             return {
                 ...state,
                 userCart: updatedCart
