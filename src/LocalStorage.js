@@ -2,7 +2,7 @@
 export const loadState = () => {
     try {
         // console.log('load state function');
-        const serializedState = localStorage.getItem('CrisfoodAdmin');
+        const serializedState = localStorage.getItem('reduxPractice');
         if (serializedState === null) {
             return undefined;
         }
@@ -17,7 +17,7 @@ export const loadState = () => {
 export const saveState = (state) => {
     try {
         const serializedState = JSON.stringify(state);
-        localStorage.setItem('CrisfoodAdmin', serializedState);
+        localStorage.setItem('reduxPractice', serializedState);
     } catch (error) {
 
     }
