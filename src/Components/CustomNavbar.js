@@ -26,7 +26,7 @@ const CustomNavbar = () => {
 
 
   // close modal
-  const handleClose = () => {
+  const handleHideModal = () => {
     console.log("close modal");
     setShowModal(false)
   }
@@ -34,8 +34,8 @@ const CustomNavbar = () => {
 
   // remove clicked item
   const handleRemove = (id) => {
-    dispatch(removeClickedProduct(id))
     console.log("item removed", id);
+    dispatch(removeClickedProduct(id))
   }
 
 
@@ -73,7 +73,7 @@ const CustomNavbar = () => {
 
 
       {/* modal start */}
-      <Modal show={showModal} onHide={handleClose}>
+      <Modal show={showModal} onHide={handleHideModal}>
         <Modal.Header closeButton>
           <Modal.Title>Cart Items</Modal.Title>
         </Modal.Header>
@@ -107,7 +107,7 @@ const CustomNavbar = () => {
           <Button variant="danger" onClick={handleRemoveAll}>
             Remove All
           </Button>
-          <Button variant="secondary" onClick={handleClose}>
+          <Button variant="secondary" onClick={handleHideModal}>
             Close
           </Button>
         </Modal.Footer>
